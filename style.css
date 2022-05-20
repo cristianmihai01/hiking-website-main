@@ -1,0 +1,36 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+  /* font */
+  --f-primary: 'Poppins';
+  /* colors */
+  --c-bg: hsl(195, 100%, 99%);
+  --c-white: hsl(0, 0%, 100%);
+  --c-blue: hsl(219, 97%, 62%);
+  --c-light-blue: hsl(218, 100%, 96%);
+  --c-hard-blue: hsl(219, 60%, 49%);
+  --c-dark-blue: hsl(228, 33%, 3%);
+  --c-grey-blue: hsl(227, 9%, 40%);
+  --c-red: hsl(349, 99%, 58%);
+  --c-yellow: hsl(45, 100%, 48%);
+  --c-linear-blue: linear-gradient(95.44deg, #3ee1fc 0%, #3e82fc 100%);
+  --c-shadow: 0px 4px 60px rgba(62, 130, 252, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--f-primary);
+  color: var(--c-grey-blue);
+  font-size: 1.8rem;
+}

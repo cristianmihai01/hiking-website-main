@@ -34,3 +34,16 @@ body {
   color: var(--c-grey-blue);
   font-size: 1.8rem;
 }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 3rem;
+  margin: auto;
+}
+
+/* Media Queries */
+/* 576px - phones. */
+/* 768px - tablets. */
+/* 992px - laptops. */
+/* 1200px - large devices. */

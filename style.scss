@@ -127,6 +127,32 @@ h5 {
   }
 }
 
+// header styles
+.header {
+  &__container {
+    display: flex;
+  }
+}
+
+.nav {
+  background: $c-dark-blue;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  right: 0;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__item {
+    margin: 2rem 0;
+  }
+  &__link {
+    color: $c-white;
+  }
+}
+
 /* Media Queries */
 /* 576px - phones. */
 /* 768px - tablets. */

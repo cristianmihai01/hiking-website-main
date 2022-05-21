@@ -97,6 +97,37 @@ h5 {
   color: #4082fc;
 }
 
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav {
+  background: #05060a;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  right: 0;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.nav__item {
+  margin: 2rem 0;
+}
+
+.nav__link {
+  color: white;
+}
+
 /* Media Queries */
 /* 576px - phones. */
 /* 768px - tablets. */

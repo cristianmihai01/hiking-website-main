@@ -8,21 +8,33 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div class="container">
-      <span class="section__pretitle">Happy Hikers</span>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, impedit
-        facere molestias, itaque fugit quas soluta quos nam asperiores quidem
-        ratione quam sequi error quisquam perferendis voluptatum odio, ipsum
-        dolor?
-      </p>
-      <ul>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
-      </ul>
-    </div>
+    <!-- Header Start -->
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#">
+          <img src="img/logo.svg" alt="" />
+        </a>
+        <!-- nav trigger -->
+        <div class="header__nav-trigger">
+          <box-icon name="menu-alt-right"></box-icon>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Location</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Blogs</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Testimonials</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
 
     <!-- Box Icons -->
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>

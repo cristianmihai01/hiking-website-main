@@ -1,0 +1,104 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+
+/* fonts & typography */
+
+$f-primary: 'Poppins', sans-serif;
+$base-font-size: 1.8rem;
+$base-line-height: $base-font-size * 1.5;
+
+$fw-thin: 100;
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+/* colors */
+$c-bg: hsl(195, 100%, 99%);
+$c-white: hsl(0, 0%, 100%);
+$c-blue: hsl(219, 97%, 62%);
+$c-light-blue: hsl(218, 100%, 96%);
+$c-hard-blue: hsl(219, 60%, 49%);
+$c-dark-blue: hsl(228, 33%, 3%);
+$c-grey-blue: hsl(227, 9%, 40%);
+$c-red: hsl(349, 99%, 58%);
+$c-yellow: hsl(45, 100%, 48%);
+$c-linear-blue: linear-gradient(95.44deg, #3ee1fc 0%, #3e82fc 100%);
+$c-shadow: 0px 4px 60px rgba(62, 130, 252, 0.35);
+
+/* base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $f-primary;
+  color: $c-grey-blue;
+  font-size: $base-font-size;
+  line-height: $base-font-size;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $c-dark-blue;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $c-dark-blue;
+}
+
+h1 {
+  font-size: 7.2rem;
+  font-weight: $fw-semibold;
+  line-height: 1.28;
+}
+
+h2 {
+  font-size: 6.2rem;
+  font-weight: $fw-semibold;
+  line-height: 1.26;
+}
+
+/* resusable classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 3rem;
+  margin: auto;
+}
+
+.section {
+  padding: 13rem 0;
+  &__title {
+    @extend h2;
+  }
+}
+
+/* Media Queries */
+/* 576px - phones. */
+/* 768px - tablets. */
+/* 992px - laptops. */
+/* 1200px - large devices. */

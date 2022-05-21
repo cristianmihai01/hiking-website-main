@@ -33,17 +33,18 @@ a {
   text-decoration: none;
 }
 
-h1,
+h1, .section__title--h1,
 h2,
-.section__title,
+.section__title--h2,
 h3,
+.section__title--h3,
 h4,
 h5,
 h6 {
   color: #05060a;
 }
 
-h1 {
+h1, .section__title--h1 {
   font-size: 7.2rem;
   font-weight: 600;
   line-height: 1.28;
@@ -51,10 +52,21 @@ h1 {
 
 
 h2,
-.section__title {
+.section__title--h2 {
   font-size: 6.2rem;
   font-weight: 600;
   line-height: 1.26;
+}
+
+
+h3,
+.section__title--h3 {
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 2.4rem;
 }
 
 /* resusable classes */
@@ -67,6 +79,17 @@ h2,
 
 .section {
   padding: 13rem 0;
+}
+
+.section__subtitle {
+  font-size: 2.2rem;
+  line-height: 1.46;
+}
+
+.section__pretitle {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 500;
 }
 
 /* Media Queries */

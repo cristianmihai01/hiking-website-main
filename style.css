@@ -29,7 +29,6 @@ ul {
 }
 
 a {
-  font-weight: 400;
   text-decoration: none;
 }
 
@@ -105,6 +104,8 @@ h5 {
   .header {
     height: auto;
     padding: 4.3rem 0;
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -131,6 +132,7 @@ h5 {
   background-color: #3ee1fc;
   font-size: 4rem;
   color: #05060a;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -153,6 +155,7 @@ h5 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -196,6 +199,13 @@ h5 {
 
 .nav.open {
   max-height: 100%;
+}
+
+.hero {
+  background: url("./img/hero_bg.png") no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 79.6rem;
 }
 
 /* Media Queries */

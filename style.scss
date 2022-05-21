@@ -56,7 +56,6 @@ ul {
 }
 
 a {
-  font-weight: $fw-regular;
   text-decoration: none;
 }
 
@@ -133,6 +132,8 @@ h5 {
   @media (min-width: 768px) {
     height: auto;
     padding: 4.3rem 0;
+    position: fixed;
+    width: 100%;
   }
   &__container {
     display: flex;
@@ -147,6 +148,7 @@ h5 {
     background-color: #3ee1fc;
     font-size: 4rem;
     color: $c-dark-blue;
+    cursor: pointer;
     @media (min-width: 768px) {
       display: none;
     }
@@ -162,6 +164,7 @@ h5 {
   display: flex;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
   @media (min-width: 768px) {
     background: none;
@@ -179,9 +182,6 @@ h5 {
   }
   &__item {
     margin: 2rem 0;
-    // @media (min-width: 768px) {
-
-    // }
   }
   &__link {
     color: $c-white;
@@ -193,6 +193,14 @@ h5 {
   &.open {
     max-height: 100%;
   }
+}
+
+// .hero styles
+.hero {
+  background: url('./img/hero_bg.png') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 79.6rem;
 }
 
 /* Media Queries */

@@ -19,7 +19,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #5d616f;
   font-size: 1.8rem;
-  line-height: 1.8rem;
+  line-height: 2.7rem;
 }
 
 ul {
@@ -62,11 +62,19 @@ h2,
 h3,
 .section__title--h3 {
   font-size: 4rem;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 h4 {
   font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.083333;
+}
+
+h5 {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 /* resusable classes */

@@ -129,16 +129,28 @@ h5 {
 
 // header styles
 .header {
+  height: 7rem;
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__logo {
+    display: flex;
+  }
+  &__nav-trigger {
+    background-color: #3ee1fc;
+    font-size: 4rem;
+    color: $c-dark-blue;
   }
 }
-
 .nav {
   background: $c-dark-blue;
   position: absolute;
   width: 100%;
   height: auto;
+  top: 7rem;
   left: 0;
   right: 0;
   padding: 2rem 0;

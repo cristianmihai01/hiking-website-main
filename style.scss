@@ -31,6 +31,25 @@ $c-yellow: hsl(45, 100%, 48%);
 $c-linear-blue: linear-gradient(95.44deg, #3ee1fc 0%, #3e82fc 100%);
 $c-shadow: 0px 4px 60px rgba(62, 130, 252, 0.35);
 
+// breakpoints
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
 /* base styles */
 * {
   margin: 0;
@@ -62,24 +81,39 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   color: $c-dark-blue;
   font-weight: $fw-semibold;
+  margin-bottom: 1.2rem;
+  @include respond(tablet) {
+    font-size: 2.4rem;
+  }
 }
 
 h1 {
-  font-size: 7.2rem;
+  font-size: 3.6rem;
   line-height: 1.28;
+  @include respond(tablet) {
+    font-size: 7.2rem;
+  }
 }
 
 h2 {
-  font-size: 6.2rem;
+  font-size: 3.1rem;
   line-height: 1.26;
+  @include respond(tablet) {
+    font-size: 6.2rem;
+  }
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 2rem;
   line-height: 1.5;
+  @include respond(tablet) {
+    font-size: 4rem;
+  }
 }
 
 h4 {
@@ -93,6 +127,11 @@ h5 {
   font-weight: $fw-medium;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 /* resusable classes */
 .container {
   width: 100%;
@@ -101,37 +140,32 @@ h5 {
   margin: auto;
 }
 
+.pretitle {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: $fw-medium;
+  color: $c-blue;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  line-height: 1.46;
+  margin-bottom: 3.2rem;
+}
+
 .section {
-  padding: 13rem 0;
-  &__title {
-    &--h1 {
-      @extend h1;
-    }
-    &--h2 {
-      @extend h2;
-    }
-    &--h3 {
-      @extend h3;
-    }
-  }
-  &__subtitle {
-    font-size: 2.2rem;
-    line-height: 1.46;
-  }
-  &__pretitle {
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: $fw-medium;
-    color: $c-blue;
+  padding: 4rem 0;
+  @include respond(tablet) {
+    padding: 13rem 0;
   }
 }
 
 // header styles
 .header {
   height: 7rem;
-  @media (min-width: 768px) {
+  @include respond(tablet) {
     height: auto;
-    padding: 4.3rem 0;
+    padding: 2.4rem 0;
     position: fixed;
     width: 100%;
   }
@@ -149,7 +183,7 @@ h5 {
     font-size: 4rem;
     color: $c-dark-blue;
     cursor: pointer;
-    @media (min-width: 768px) {
+    @include respond(tablet) {
       display: none;
     }
   }
@@ -166,14 +200,14 @@ h5 {
   text-align: center;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  @media (min-width: 768px) {
+  @include respond(tablet) {
     background: none;
     position: relative;
     max-height: 100%;
     top: 0;
   }
   &__list {
-    @media (min-width: 768px) {
+    @include respond(tablet) {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -201,6 +235,14 @@ h5 {
   background-size: cover;
   background-position: top center;
   min-height: 79.6rem;
+  &__subtitle {
+    max-width: 459px;
+    margin-bottom: 5.2rem;
+  }
+  &__img {
+    max-width: 488px;
+    max-height: 662px;
+  }
 }
 
 /* Media Queries */

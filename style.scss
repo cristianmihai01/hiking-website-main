@@ -163,6 +163,25 @@ img {
   }
 }
 
+.btn {
+  background: none;
+  border: none;
+  font-family: $f-primary;
+  font-size: 1.8rem;
+  font-weight: $fw-semibold;
+  padding: 1.5rem 4rem;
+  border-radius: 30px;
+  &--primary {
+    background: $c-blue;
+    color: $c-white;
+  }
+  &--outline {
+    background: none;
+    color: $c-blue;
+    border: 1px solid $c-blue;
+  }
+}
+
 // header styles
 .header {
   height: 7rem;
@@ -202,7 +221,7 @@ img {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   @include respond(tablet) {
     background: none;
     position: relative;
@@ -238,9 +257,28 @@ img {
   background-size: cover;
   background-position: top center;
   min-height: 79.6rem;
+  &__left, &__right {
+    flex: 1;
+  }
+  &__right {
+    display: flex;
+    justify-content: end;
+  }
+  &__container {
+    @include respond(desktop) {
+      display: flex;
+    }
+  }
   &__subtitle {
     max-width: 459px;
     margin-bottom: 5.2rem;
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 1.4rem;
+    @include respond(desktop) {
+      width: auto;
+    } 
   }
   &__img {
     max-width: 488px;

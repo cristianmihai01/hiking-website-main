@@ -87,15 +87,12 @@ h6 {
   color: $c-dark-blue;
   font-weight: $fw-semibold;
   margin-bottom: 1.2rem;
-  @include respond(tablet) {
-    font-size: 2.4rem;
-  }
 }
 
 h1 {
   font-size: 3.6rem;
   line-height: 1.28;
-  @include respond(tablet) {
+  @include respond(desktop) {
     font-size: 7.2rem;
   }
 }
@@ -167,13 +164,18 @@ img {
   background: none;
   border: none;
   font-family: $f-primary;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: $fw-semibold;
   padding: 1.5rem 4rem;
   border-radius: 30px;
+  cursor: pointer;
+  @include respond(tablet) {
+    font-size: 1.8rem;
+  }
   &--primary {
     background: $c-blue;
     color: $c-white;
+    box-shadow: $c-shadow;
   }
   &--outline {
     background: none;
@@ -257,32 +259,73 @@ img {
   background-size: cover;
   background-position: top center;
   min-height: 79.6rem;
-  &__left, &__right {
+  &__left,
+  &__right {
     flex: 1;
   }
   &__right {
-    display: flex;
-    justify-content: end;
-  }
-  &__container {
+    display: none;
+    @include respond(tablet) {
+      display: flex;
+      justify-content: end;
+    }
     @include respond(desktop) {
       display: flex;
     }
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include respond(desktop) {
+      flex-direction: row;
+    }
+  }
   &__subtitle {
     max-width: 459px;
-    margin-bottom: 5.2rem;
+    margin-bottom: 2.6rem;
+    @include respond(tablet) {
+      margin-bottom: 5.2rem;
+    }
   }
   &__btn {
     width: 100%;
     margin-bottom: 1.4rem;
-    @include respond(desktop) {
+    &:nth-of-type(1) {
+      margin-right: 2rem;
+    }
+    @include respond(tablet) {
       width: auto;
-    } 
+    }
   }
   &__img {
     max-width: 488px;
     max-height: 662px;
+    display: none;
+    @include respond(desktop) {
+      display: flex;
+    }
+  }
+}
+
+// features styles
+.features {
+  // background-color: aqua;
+  margin-top: -8rem;
+  padding: 4rem 0;
+  &__container {
+    background: #3ee1fc;
+  }
+  .feature {
+    text-align: center;
+    margin-bottom: 4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__img {
+      width: 7.6rem;
+      height: 7.6rem;
+      margin: 0 auto 2.8rem auto;
+    }
   }
 }
 

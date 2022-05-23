@@ -307,7 +307,7 @@ img {
   background: url("./img/hero_bg.svg") no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 10rem 0;
+  padding: 10rem 0 5rem 0;
   position: relative;
   z-index: 1;
 }

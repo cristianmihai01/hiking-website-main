@@ -1,6 +1,9 @@
-const nav = document.querySelector('.nav');
-const navTrigger = document.querySelector('.header__nav-trigger');
+// select header
 const header = document.querySelector('.header');
+// select nav
+const nav = document.querySelector('.nav');
+// select nav trigger
+const navTrigger = document.querySelector('.header__nav-trigger');
 
 // open - close menu
 navTrigger.addEventListener('click', () => {

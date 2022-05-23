@@ -208,8 +208,14 @@ img {
 .header {
   position: fixed;
   width: 100%;
-  height: 7rem;
+  padding: 2.4rem 0;
   z-index: 3;
+  transition: all .2s ease-in-out;
+  &.active {
+    padding: 1.2rem 0;
+    background: $c-white;
+    transition: all .2s ease-in-out;
+  }
   @include respond(tablet) {
     height: auto;
     padding: 2.4rem 0;
@@ -237,7 +243,7 @@ img {
   background: $c-dark-blue;
   position: absolute;
   max-height: 0;
-  top: 7rem;
+  top: 8rem;
   left: 0;
   right: 0;
   display: flex;
@@ -392,7 +398,7 @@ img {
       }
     }
     &__subtitle {
-      margin-bottom: .8rem;
+      margin-bottom: 1rem;
     }
     &__link {
       color: $c-red;

@@ -188,8 +188,17 @@ img {
 .header {
   position: fixed;
   width: 100%;
-  height: 7rem;
+  padding: 2.4rem 0;
   z-index: 3;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header.active {
+  padding: 1.2rem 0;
+  background: white;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -235,7 +244,7 @@ img {
   background: #05060a;
   position: absolute;
   max-height: 0;
-  top: 7rem;
+  top: 8rem;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -493,7 +502,7 @@ img {
 }
 
 .features .feature__subtitle {
-  margin-bottom: .8rem;
+  margin-bottom: 1rem;
 }
 
 .features .feature__link {

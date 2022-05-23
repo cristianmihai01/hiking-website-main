@@ -19,7 +19,7 @@ $fw-extrabold: 800;
 $fw-black: 900;
 
 /* colors */
-$c-bg: hsl(195, 100%, 99%);
+$c-body: hsl(195, 100%, 99%);
 $c-white: hsl(0, 0%, 100%);
 $c-blue: hsl(219, 97%, 62%);
 $c-light-blue: hsl(218, 100%, 96%);
@@ -66,6 +66,7 @@ body {
   color: $c-grey-blue;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  background: $c-body;
 }
 
 ul {
@@ -294,6 +295,7 @@ img {
       height: 436px;
       background: url('./img/model.svg') no-repeat;
       bottom: -436px;
+      z-index: -1;
     }
   }
   &__container {
@@ -352,15 +354,27 @@ img {
 
 // features styles
 .features {
-  // background-color: aqua;
-  margin-top: -8rem;
-  padding: 4rem 0;
+  position: relative;
+  z-index: 2;
+  @include respond(desktop) {
+    margin-top: 18rem;
+  }
   &__container {
-    background: #3ee1fc;
+    padding: 6.6rem;
+    background: white;
+    @include respond(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   .feature {
     text-align: center;
     margin-bottom: 4rem;
+    max-width: 26.8rem;
+    @include respond(desktop) {
+      text-align: left;
+      margin-bottom: 0;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -368,6 +382,9 @@ img {
       width: 7.6rem;
       height: 7.6rem;
       margin: 0 auto 2.8rem auto;
+      @include respond(desktop) {
+        margin: 0 0 2.8rem 0;
+      }
     }
   }
 }

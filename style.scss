@@ -259,9 +259,22 @@ img {
   background-size: cover;
   background-position: top center;
   min-height: 79.6rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include respond(desktop) {
+      flex-direction: row;
+    }
+  }
   &__left,
   &__right {
     flex: 1;
+  }
+  &__left {
+    text-align: center;
+    @include respond(desktop) {
+      text-align: left;
+    }
   }
   &__right {
     display: none;
@@ -273,18 +286,11 @@ img {
       display: flex;
     }
   }
-  &__container {
-    display: flex;
-    flex-direction: column;
-    @include respond(desktop) {
-      flex-direction: row;
-    }
-  }
   &__subtitle {
     max-width: 459px;
-    margin-bottom: 2.6rem;
-    @include respond(tablet) {
-      margin-bottom: 5.2rem;
+    margin: 0 auto 2.6rem auto;
+    @include respond(desktop) {
+      margin: 0 0 5.2rem 0;
     }
   }
   &__btn {

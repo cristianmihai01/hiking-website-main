@@ -408,14 +408,14 @@ img {
         width: 0;
         height: 2px;
         background:transparent;
-        transition: all 0.3s ease;
+        transition: all 0.38s ease;
       }
       &:hover {
         &:after {
           content: '';
           display: block;
           width: 7rem;
-          transition: all 0.3s ease;
+          transition: all 0.38s ease;
           height: 2px;
           background:$c-red;
         }

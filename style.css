@@ -515,16 +515,16 @@ img {
   width: 0;
   height: 2px;
   background: transparent;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.38s ease;
+  transition: all 0.38s ease;
 }
 
 .features .feature__link:hover:after {
   content: '';
   display: block;
   width: 7rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.38s ease;
+  transition: all 0.38s ease;
   height: 2px;
   background: #fe2a51;
 }

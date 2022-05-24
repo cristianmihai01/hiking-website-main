@@ -31,14 +31,10 @@ ul {
 
 a {
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
   color: #4082fc;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 h1,
@@ -190,15 +186,17 @@ img {
   width: 100%;
   padding: 2.4rem 0;
   z-index: 3;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header.active {
   padding: 1.2rem 0;
   background: white;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0px 54px 104px 0px #0000000a;
+          box-shadow: 0px 54px 104px 0px #0000000a;
 }
 
 @media (min-width: 768px) {
@@ -288,6 +286,8 @@ img {
 .nav__link {
   color: white;
   font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -446,8 +446,8 @@ img {
 .features__container {
   padding: 6.6rem;
   background: white;
-  -webkit-box-shadow: 0px 54px 104px 0px #0000000A;
-          box-shadow: 0px 54px 104px 0px #0000000A;
+  -webkit-box-shadow: 0px 54px 104px 0px #0000000a;
+          box-shadow: 0px 54px 104px 0px #0000000a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,10 +523,33 @@ img {
   content: '';
   display: block;
   width: 7rem;
+  height: 2px;
   -webkit-transition: all 0.38s ease;
   transition: all 0.38s ease;
-  height: 2px;
   background: #fe2a51;
+}
+
+.features__explore-text {
+  text-align: center;
+  margin-top: 3.8rem;
+  padding: 0 1rem;
+}
+
+.features__explore-text a {
+  color: #fe2a51;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.features__explore-text a:hover {
+  border-bottom: 2px solid #fe2a51;
+}
+
+@media (min-width: 768px) {
+  .features__explore-text {
+    margin-top: 7.6rem;
+    padding: 0;
+  }
 }
 
 /* Media Queries */

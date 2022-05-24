@@ -166,6 +166,9 @@ img {
   @include respond(tablet) {
     padding: 13rem 0;
   }
+}
+.section-primary {
+  background: url('./img/texture-bg.svg') center center no-repeat;
   &__img {
     max-width: 488px;
     margin-bottom: 2rem;
@@ -185,6 +188,16 @@ img {
     display: none;
   }
   @include respond(desktop) {
+    
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 14.4rem;
+    }
+    &__text,
+    &__img {
+      flex: 1;
+    }
     &__number {
       display: block;
       font-size: 21rem;
@@ -193,6 +206,10 @@ img {
       color: $c-light-blue;
     }
   }
+  
+  
+  
+
 }
 
 .btn {
@@ -467,25 +484,6 @@ img {
     @include respond(tablet) {
       margin: 7.6rem 0 5.6rem 0;
       padding: 0;
-    }
-  }
-}
-
-// section-1 styles
-.section-1 {
-  background: url('./img/texture-bg.svg') center center no-repeat;
-  &__img {
-    margin-bottom: 2rem;
-  }
-  @include respond(desktop) {
-    &__container {
-      display: flex;
-      align-items: center;
-      gap: 14.4rem;
-    }
-    &__text,
-    &__img {
-      flex: 1;
     }
   }
 }

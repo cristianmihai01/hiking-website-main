@@ -160,6 +160,33 @@ img {
 
 .section {
   padding: 4rem 0;
+  &__img {
+    max-width: 488px;
+    margin-bottom: 2rem;
+    @include respond(desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__subtitle {
+    max-width: 37.4rem;
+  }
+  &__text-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      display: none;
+    }
+    @include respond(desktop) {
+      span {
+        display: block;
+        font-size: 21rem;
+        font-style: italic;
+        font-weight: $fw-extrabold;
+        color: $c-light-blue;
+      }
+    }
+  }
   @include respond(tablet) {
     padding: 13rem 0;
   }
@@ -424,7 +451,7 @@ img {
   }
   &__explore-text {
     text-align: center;
-    margin-top: 3.8rem;
+    margin: 3.8rem 0 2.8rem;
     padding: 0 1rem;
     a {
       color: $c-red;
@@ -435,14 +462,27 @@ img {
       }
     }
     @include respond(tablet) {
-      margin-top: 7.6rem;
+      margin: 7.6rem 0 5.6rem 0;
       padding: 0;
     }
   }
 }
 
-/* Media Queries */
-/* 576px - phones. */
-/* 768px - tablets. */
-/* 992px - laptops. */
-/* 1200px - large devices. */
+// section-1 styles
+.section-1 {
+  background: url('./img/texture-bg.svg') center center no-repeat;
+  &__img {
+    margin-bottom: 2rem;
+  }
+  @include respond(desktop) {
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 14.4rem;
+    }
+    &__text,
+    &__img {
+      flex: 1;
+    }
+  }
+}

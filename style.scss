@@ -143,10 +143,13 @@ img {
 }
 
 .pretitle {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.3;
   font-weight: $fw-medium;
   color: $c-blue;
+  @include respond(tablet) {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
@@ -483,6 +486,28 @@ img {
     &__text,
     &__img {
       flex: 1;
+    }
+  }
+}
+
+// companies
+.companies {
+  text-align: center;
+  &__title {
+    margin-bottom: 5.7rem;
+    @include respond(tablet) {
+      margin-bottom: 11.4rem;
+    }
+  }
+  .brands {
+    max-width: 105.3rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    @include respond(tablet) {
+      gap: 8rem;
     }
   }
 }

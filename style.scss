@@ -167,36 +167,48 @@ img {
     padding: 13rem 0;
   }
 }
+
 .section-primary {
   background: url('./img/texture-bg.svg') center center no-repeat;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   &__img {
     max-width: 488px;
     margin-bottom: 2rem;
-    @include respond(desktop) {
-      margin-bottom: 0;
-    }
   }
   &__subtitle {
-    max-width: 37.4rem;
+    max-width: 77.4rem;
+    margin: 0 0 3.2rem 0;
   }
-  &__text-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  
   &__number {
     display: none;
   }
   @include respond(desktop) {
-    
     &__container {
       display: flex;
-      align-items: center;
+      flex-direction: row;
+      text-align: left;
       gap: 14.4rem;
+    }
+    &__img {
+      margin-bottom: 0;
     }
     &__text,
     &__img {
       flex: 1;
+    }
+    &__subtitle {
+      max-width: 37.4rem;
+    }
+    &__text-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     &__number {
       display: block;

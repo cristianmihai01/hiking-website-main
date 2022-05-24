@@ -160,6 +160,9 @@ img {
 
 .section {
   padding: 4rem 0;
+  @include respond(tablet) {
+    padding: 13rem 0;
+  }
   &__img {
     max-width: 488px;
     margin-bottom: 2rem;
@@ -174,21 +177,18 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    span {
-      display: none;
-    }
-    @include respond(desktop) {
-      span {
-        display: block;
-        font-size: 21rem;
-        font-style: italic;
-        font-weight: $fw-extrabold;
-        color: $c-light-blue;
-      }
-    }
   }
-  @include respond(tablet) {
-    padding: 13rem 0;
+  &__number {
+    display: none;
+  }
+  @include respond(desktop) {
+    &__number {
+      display: block;
+      font-size: 21rem;
+      font-style: italic;
+      font-weight: $fw-extrabold;
+      color: $c-light-blue;
+    }
   }
 }
 

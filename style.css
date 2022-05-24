@@ -128,6 +128,12 @@ img {
   padding: 4rem 0;
 }
 
+@media (min-width: 768px) {
+  .section {
+    padding: 13rem 0;
+  }
+}
+
 .section__img {
   max-width: 488px;
   margin-bottom: 2rem;
@@ -155,23 +161,17 @@ img {
           justify-content: space-between;
 }
 
-.section__text-group span {
+.section__number {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .section__text-group span {
+  .section__number {
     display: block;
     font-size: 21rem;
     font-style: italic;
     font-weight: 800;
     color: #ebf2ff;
-  }
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding: 13rem 0;
   }
 }
 

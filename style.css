@@ -141,7 +141,7 @@ img {
 }
 
 .section-primary {
-  background: url("./img/texture-bg.svg") center center no-repeat;
+  background: url("assets/img/texture-bg.svg") center center no-repeat;
 }
 
 .section-primary__container {
@@ -385,7 +385,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("./img/hero_bg.svg") no-repeat;
+  background: url("assets/img/hero_bg.svg") no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 10rem 0 5rem 0;
@@ -409,7 +409,7 @@ img {
     position: absolute;
     width: 100%;
     height: 123.4rem;
-    background: url("./img/model.svg") no-repeat;
+    background: url("assets/img/model.svg") no-repeat;
     top: 0;
     z-index: -1;
   }
@@ -665,5 +665,26 @@ img {
   .companies .brands {
     gap: 8rem;
   }
+}
+
+.testimonial__item {
+  background: url("./assets/img/testimonial-texture.svg"), white;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 5.2rem 5.7rem;
+  border-radius: 140px 0;
+  border: 1px solid #ebf2ff;
+}
+
+@media (min-width: 768px) {
+  .testimonial__item {
+    max-width: 72.6rem;
+  }
+}
+
+.testimonial__client-img {
+  width: 104px;
+  height: 104px;
 }
 /*# sourceMappingURL=style.css.map */

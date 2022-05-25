@@ -11,7 +11,7 @@ navTrigger.addEventListener('click', () => {
 });
 
 // header background on scroll
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
   if (window.scrollY > 40) {
     header.classList.add('active');
   } else {
@@ -19,25 +19,22 @@ window.addEventListener('scroll', (e) => {
   }
 });
 
-// swiper
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
+// Initialize Swiper
+let swiper = new Swiper('.testimonial', {
+  slidesPerView: 2,
+  spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
   },
 });

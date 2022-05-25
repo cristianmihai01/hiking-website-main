@@ -686,5 +686,23 @@ img {
 .testimonial__client-img {
   width: 104px;
   height: 104px;
+  margin-bottom: 2rem;
+}
+
+.testimonial__client-name {
+  margin-bottom: 0.4rem;
+}
+
+.testimonial__client-type {
+  color: #fe2a51;
+  margin-bottom: 2rem;
+}
+
+.testimonial__client-message {
+  margin-bottom: 1.2rem;
+}
+
+.testimonial__client-stars {
+  color: #f5b800;
 }
 /*# sourceMappingURL=style.css.map */

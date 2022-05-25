@@ -536,9 +536,26 @@ img {
       max-width: 72.6rem;
     }
   }
-  &__client-img {
-    width: 104px;
+  &__client {
+    &-img {
+      width: 104px;
     height: 104px;
+    margin-bottom: 2rem;
+    }
+    &-name {
+      margin-bottom: 0.4rem;
+    }
+    &-type {
+      color: $c-red;
+      margin-bottom: 2rem;
+    }
+    &-message {
+      margin-bottom: 1.2rem;
+    }
+    &-stars {
+      color: $c-yellow;
+    }
   }
+
 }
 

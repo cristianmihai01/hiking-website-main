@@ -111,7 +111,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 1.5;
   @include breakpoint(desktop) {
     font-size: 4rem;
@@ -502,7 +502,7 @@ img {
   }
 }
 
-// companies
+// companies styles
 .companies {
   text-align: center;
   &__title {
@@ -524,7 +524,7 @@ img {
   }
 }
 
-// testimonials
+// testimonials styles
 .testimonials {
   h3,
   .pretitle {
@@ -568,6 +568,39 @@ img {
       &-stars {
         color: $c-yellow;
       }
+    }
+  }
+}
+
+// newsletter styles
+.newsletter {
+  background-color: $c-light-blue;
+  text-align: center;
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__subtitle {
+    max-width: 63.7rem;
+    margin: auto;
+    margin-bottom: 7.6rem;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 63.7rem;
+    margin: auto;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+    &__input {
+      width: 100%;
+      background: none;
+      border: 1px solid $c-blue !important;
+      padding: 0 4rem;
+      border-radius: 30px;
+      height: 6.2rem;
+      outline: none;
     }
   }
 }

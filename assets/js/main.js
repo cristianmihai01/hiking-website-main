@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Initialize Swiper
-let swiper = new Swiper('.testimonial', {
+let swiper = new Swiper('.slider', {
   slidesPerView: 2,
   spaceBetween: 30,
   pagination: {

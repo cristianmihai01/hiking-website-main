@@ -33,7 +33,7 @@ $c-shadow: 0px 4px 60px rgba(62, 130, 252, 0.35);
 $c-shadow-1: 0px 54px 104px 0px #0000000a;
 
 // breakpoints
-@mixin respond($breakpoint) {
+@mixin breakpoint($breakpoint) {
   @if $breakpoint == tablet {
     @media (min-width: 768px) {
       @content;
@@ -97,7 +97,7 @@ h6 {
 h1 {
   font-size: 3.6rem;
   line-height: 1.28;
-  @include respond(desktop) {
+  @include breakpoint(desktop) {
     font-size: 7.2rem;
   }
 }
@@ -105,7 +105,7 @@ h1 {
 h2 {
   font-size: 3.1rem;
   line-height: 1.26;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     font-size: 6.2rem;
   }
 }
@@ -113,7 +113,7 @@ h2 {
 h3 {
   font-size: 2rem;
   line-height: 1.5;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     font-size: 4rem;
   }
 }
@@ -147,7 +147,7 @@ img {
   line-height: 1.3;
   font-weight: $fw-medium;
   color: $c-blue;
-  @include respond(tablet) {
+  @include breakpoint(tablet) {
     font-size: 2rem;
   }
 }
@@ -156,14 +156,14 @@ img {
   font-size: 1.8rem;
   line-height: 1.46;
   margin-bottom: 3.2rem;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     font-size: 2.2rem;
   }
 }
 
 .section {
   padding: 6.5rem 0;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     padding: 13rem 0;
   }
 }
@@ -179,7 +179,7 @@ img {
   height: 6.2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     font-size: 1.8rem;
   }
   &--primary {
@@ -195,7 +195,6 @@ img {
     background: none;
     color: $c-blue;
     border: 1px solid $c-blue;
-
     &:hover {
       background: $c-blue;
       border: 1px solid transparent;
@@ -213,28 +212,36 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      text-align: left;
+      gap: 6rem;
+    }
   }
   &__img {
-    max-width: 488px;
+    max-width: 40rem;
     margin: 3rem 0;
+    @include breakpoint(tablet) {
+      max-width: 30rem;
+    }
+    @include breakpoint(desktop) {
+      max-width: 48.8rem;
+      margin: 0;
+    }
   }
   &__subtitle {
     max-width: 77.4rem;
     margin: 0 0 3.2rem 0;
   }
-  
   &__number {
     display: none;
   }
-  @include respond(desktop) {
+  @include breakpoint(desktop) {
     &__container {
       display: flex;
       flex-direction: row;
       text-align: left;
       gap: 14.4rem;
-    }
-    &__img {
-      margin: 0;
     }
     &__text,
     &__img {
@@ -265,20 +272,6 @@ img {
   padding: 2.4rem 0;
   z-index: 3;
   transition: all 0.2s ease-in-out;
-  &.active {
-    background: $c-white;
-    transition: all 0.2s ease-in-out;
-    box-shadow: $c-shadow-1;
-  }
-  @include respond(desktop) {
-    &.active {
-      padding: 1.2rem 0;
-    }
-  }
-  @include respond(tablet) {
-    height: auto;
-    padding: 2.4rem 0;
-  }
   &__container {
     display: flex;
     justify-content: space-between;
@@ -292,8 +285,16 @@ img {
     font-size: 4rem;
     color: $c-dark-blue;
     cursor: pointer;
-    @include respond(tablet) {
+    @include breakpoint(desktop) {
       display: none;
+    }
+  }
+  &.active {
+    background: $c-white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: $c-shadow-1;
+    @include breakpoint(desktop) {
+      padding: 1.2rem 0;
     }
   }
 }
@@ -310,14 +311,14 @@ img {
   text-align: center;
   overflow: hidden;
   transition: all 0.3s ease;
-  @include respond(tablet) {
+  @include breakpoint(desktop) {
     background: none;
     position: relative;
     max-height: 100%;
     top: 0;
   }
   &__list {
-    @include respond(tablet) {
+    @include breakpoint(desktop) {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -331,7 +332,7 @@ img {
     color: $c-white;
     font-weight: $fw-medium;
     transition: all 0.2s ease-in-out;
-    @media (min-width: 768px) {
+    @include breakpoint(desktop) {
       color: $c-dark-blue;
     }
   }
@@ -349,10 +350,10 @@ img {
   padding: 10rem 0 5rem 0;
   position: relative;
   z-index: 1;
-  @include respond(tablet) {
+  @include breakpoint(tablet) {
     height: 60rem;
   }
-  @include respond(desktop) {
+  @include breakpoint(desktop) {
     padding-top: 22.6rem;
     height: 79.6rem;
     &:after {
@@ -368,7 +369,7 @@ img {
   &__container {
     display: flex;
     flex-direction: column;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       flex-direction: row;
     }
   }
@@ -378,24 +379,24 @@ img {
   }
   &__left {
     text-align: center;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       text-align: left;
     }
   }
   &__right {
     display: none;
-    @include respond(tablet) {
+    @include breakpoint(tablet) {
       display: flex;
       justify-content: end;
     }
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       display: flex;
     }
   }
   &__subtitle {
     max-width: 459px;
     margin: 0 auto 2.6rem auto;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       margin: 0 0 5.2rem 0;
     }
   }
@@ -405,7 +406,7 @@ img {
     &:nth-of-type(1) {
       margin-right: 2rem;
     }
-    @include respond(tablet) {
+    @include breakpoint(tablet) {
       width: auto;
     }
   }
@@ -413,7 +414,7 @@ img {
     max-width: 488px;
     max-height: 662px;
     display: none;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       display: flex;
     }
   }
@@ -423,7 +424,7 @@ img {
 .features {
   position: relative;
   z-index: 2;
-  @include respond(desktop) {
+  @include breakpoint(desktop) {
     margin-top: 18rem;
   }
   &__container {
@@ -433,7 +434,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -442,7 +443,7 @@ img {
     text-align: center;
     margin-bottom: 4rem;
     max-width: 26.8rem;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       text-align: left;
       margin-bottom: 0;
     }
@@ -453,7 +454,7 @@ img {
       width: 7.6rem;
       height: 7.6rem;
       margin: 0 auto 2.8rem auto;
-      @include respond(desktop) {
+      @include breakpoint(desktop) {
         margin: 0 0 2.8rem 0;
       }
     }
@@ -494,7 +495,7 @@ img {
         border-bottom: 2px solid $c-red;
       }
     }
-    @include respond(tablet) {
+    @include breakpoint(tablet) {
       margin: 7.6rem 0 5.6rem 0;
       padding: 0;
     }
@@ -506,7 +507,7 @@ img {
   text-align: center;
   &__title {
     margin-bottom: 5.7rem;
-    @include respond(tablet) {
+    @include breakpoint(tablet) {
       margin-bottom: 11.4rem;
     }
   }
@@ -517,7 +518,7 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
-    @include respond(tablet) {
+    @include breakpoint(tablet) {
       gap: 8rem;
     }
   }
@@ -525,33 +526,34 @@ img {
 
 // testimonials
 .testimonials {
-  h3, .pretitle {
+  h3,
+  .pretitle {
     text-align: center;
   }
   h3 {
     margin-bottom: 5.2rem;
-    @include respond(desktop) {
+    @include breakpoint(desktop) {
       margin-bottom: 10.4rem;
     }
   }
   .slider {
     &__item {
-      background: url('./assets/img/testimonial-texture.svg'), white;
+      background: url('./assets/img/testimonial-texture.svg'), $c-white;
       width: 100%;
       max-width: 38rem;
       margin: 0 auto;
       padding: 5.2rem 5.7rem;
       border-radius: 140px 0;
       border: 1px solid lighten($c-blue, 34%);
-      @include respond(tablet) {
+      @include breakpoint(tablet) {
         max-width: 72.6rem;
       }
     }
     &__client {
       &-img {
         width: 104px;
-      height: 104px;
-      margin-bottom: 2rem;
+        height: 104px;
+        margin-bottom: 2rem;
       }
       &-name {
         margin-bottom: 0.4rem;
@@ -567,7 +569,5 @@ img {
         color: $c-yellow;
       }
     }
-  
   }
 }
-

@@ -150,8 +150,6 @@ img {
   border-radius: 30px;
   height: 6.2rem;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 1200px) {
@@ -169,8 +167,6 @@ img {
 
 .btn--primary:hover {
   background: #0e61fb;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn--outline {
@@ -183,8 +179,6 @@ img {
   background: #4082fc;
   border: 1px solid transparent;
   color: white;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .section-primary {
@@ -213,6 +207,13 @@ img {
             flex-direction: row;
     text-align: left;
     gap: 6rem;
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-primary__container {
+    width: auto;
   }
 }
 
@@ -550,13 +551,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .features__container {
+    gap: 8rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -577,7 +584,7 @@ img {
   max-width: 26.8rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .features .feature {
     text-align: left;
     margin-bottom: 0;
@@ -594,7 +601,7 @@ img {
   margin: 0 auto 2.8rem auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .features .feature__img {
     margin: 0 0 2.8rem 0;
   }
@@ -776,13 +783,235 @@ img {
   }
 }
 
+.newsletter .form__input-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.newsletter .form__icon {
+  position: absolute;
+  font-size: 2.6rem;
+  margin-left: 2.4rem;
+  color: #4082fc;
+}
+
 .newsletter .form__input {
+  font-family: "Poppins", sans-serif;
   width: 100%;
   background: none;
   border: 1px solid #4082fc !important;
-  padding: 0 4rem;
+  padding-left: 6rem;
+  font-size: 1.6rem;
+  color: #4082fc;
   border-radius: 30px;
   height: 6.2rem;
   outline: none;
+}
+
+.newsletter .form__input::-webkit-input-placeholder {
+  color: #4082fc;
+}
+
+.newsletter .form__input:-ms-input-placeholder {
+  color: #4082fc;
+}
+
+.newsletter .form__input::-ms-input-placeholder {
+  color: #4082fc;
+}
+
+.newsletter .form__input::placeholder {
+  color: #4082fc;
+}
+
+.newsletter .form__btn {
+  font-weight: 400;
+}
+
+.footer {
+  background: #ebf2ff;
+  padding-bottom: 0;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6rem;
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer__left, .footer__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  max-width: 15rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer__subtitle {
+  max-width: 34rem;
+  margin-bottom: 4.8rem;
+}
+
+@media (min-width: 1200px) {
+  .footer__subtitle {
+    font-size: 2rem;
+  }
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+.footer .social__link {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #4082fc;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .social__link:hover {
+  background: #0e61fb;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .social__icon {
+  font-size: 3rem;
+}
+
+.footer__info {
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .footer__info {
+    margin-bottom: 0;
+  }
+}
+
+.footer__info h5 {
+  margin-bottom: 3rem;
+}
+
+.footer__info ul li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+.footer__info ul a {
+  color: #5d616f;
+}
+
+.footer__info ul a:hover {
+  color: #4082fc;
+}
+
+.footer__copyright {
+  text-align: center;
+  padding: 4.8rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__copyright {
+    margin-top: 12rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -50,7 +50,7 @@
     <section class="hero">
       <div class="hero__container container">
         <div class="hero__left">
-          <h1>Be prepared for the mountains and beyond.</h1>
+          <h1 class="hero__title">Be prepared for the mountains and beyond.</h1>
           <p class="hero__subtitle subtitle">
             Are you looking for amazing hiking travel? Don’t worry! We got it
             for you!
@@ -139,7 +139,7 @@
     <!-- companies start -->
     <section class="companies section">
       <div class="companies__container container">
-        <div class="pretitle">Safe Journey</div>
+        <div class="companies__pretitle pretitle">Safe Journey</div>
         <h3 class="companies__title">Trusted by Big Companies</h3>
         <div class="brands">
           <div class="brands__item">
@@ -207,10 +207,10 @@
     <!-- section 3 end -->
 
     <!-- testimonials start -->
-    <section class="testimonials section">
+    <section class="testimonials section" id="testimonials">
       <div class="container">
-        <div class="pretitle">Happy Hikers</div>
-        <h3>Client’s Say About Us</h3>
+        <div class="testimonials__pretitle pretitle">Happy Hikers</div>
+        <h3 class="testimonials__title">Client’s Say About Us</h3>
         <div class="swiper slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -324,15 +324,79 @@
           in our blog that updated weekly. We will not spam you, we promise.
         </p>
         <form class="form">
-          <input class="form__input" type="text" />
-          <button class="btn btn--primary">Subscribe</button>
+          <div class="form__input-wrap">
+            <i class="form__icon bx bx-envelope"></i>
+            <input
+              class="form__input"
+              placeholder="Enter your e-mail address"
+              type="text"
+            />
+          </div>
+          <button class="form__btn btn btn--primary">Subscribe</button>
         </form>
       </div>
     </section>
     <!-- newsletter end -->
 
-    <div style="height: 4000px"></div>
+    <!-- footer start -->
+    <footer class="footer section" id="contact">
+      <div class="footer__container container">
+        <div class="footer__left">
+          <img class="footer__logo" src="assets/img/logo.svg" alt="" />
+          <p class="footer__subtitle">
+            We envision a world where everyone feels welcome in the American
+            hiking community.
+          </p>
+          <div class="social">
+            <a class="social__link" href="">
+              <i class="social__icon bx bxl-facebook"></i>
+            </a>
+            <a class="social__link" href="">
+              <i class="social__icon bx bxl-twitter"></i>
+            </a>
+            <a class="social__link" href="">
+              <i class="social__icon bx bxl-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__info">
+            <h5>Location</h5>
+            <ul>
+              <li><a href="#">America</a></li>
+              <li><a href="#">Asia</a></li>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">Africa</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="#">About me</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <h5>Legals</h5>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Company</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">Copyright © 2022. All Right Reserved.</div>
+    </footer>
+    <!-- footer end -->
 
+    <!-- <div style="height: 4000px"></div> -->
+
+    <!-- Scroll Reveal -->
+    <script src="assets/js/scrollreveal.min.js"></script>
     <!-- Swiper JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Main JS -->

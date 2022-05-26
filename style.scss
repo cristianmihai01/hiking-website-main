@@ -178,7 +178,7 @@ img {
   border-radius: 30px;
   height: 6.2rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+
   @include breakpoint(desktop) {
     font-size: 1.8rem;
   }
@@ -188,7 +188,6 @@ img {
     box-shadow: $c-shadow;
     &:hover {
       background: darken($c-blue, 10%);
-      transition: all 0.3s ease-in-out;
     }
   }
   &--outline {
@@ -199,7 +198,6 @@ img {
       background: $c-blue;
       border: 1px solid transparent;
       color: $c-white;
-      transition: all 0.3s ease-in-out;
     }
   }
 }
@@ -216,6 +214,10 @@ img {
       flex-direction: row;
       text-align: left;
       gap: 6rem;
+      width: 90vw;
+    }
+    @include breakpoint(desktop) {
+      width: auto;
     }
   }
   &__img {
@@ -432,8 +434,12 @@ img {
     background: white;
     box-shadow: $c-shadow-1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    @include breakpoint(tablet) {
+      gap: 8rem;
+    }
     @include breakpoint(desktop) {
       flex-direction: row;
       justify-content: space-between;
@@ -443,7 +449,7 @@ img {
     text-align: center;
     margin-bottom: 4rem;
     max-width: 26.8rem;
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       text-align: left;
       margin-bottom: 0;
     }
@@ -454,7 +460,7 @@ img {
       width: 7.6rem;
       height: 7.6rem;
       margin: 0 auto 2.8rem auto;
-      @include breakpoint(desktop) {
+      @include breakpoint(tablet) {
         margin: 0 0 2.8rem 0;
       }
     }
@@ -593,14 +599,138 @@ img {
     @include breakpoint(tablet) {
       flex-direction: row;
     }
+    &__input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+    &__icon {
+      position: absolute;
+      font-size: 2.6rem;
+      margin-left: 2.4rem;
+      color: $c-blue;
+    }
     &__input {
+      font-family: $f-primary;
       width: 100%;
       background: none;
       border: 1px solid $c-blue !important;
-      padding: 0 4rem;
+      padding-left: 6rem;
+      font-size: 1.6rem;
+      color: $c-blue;
       border-radius: 30px;
       height: 6.2rem;
       outline: none;
+      &::placeholder {
+        color: $c-blue;
+      }
+    }
+    &__btn {
+      font-weight: $fw-regular;
+    }
+  }
+}
+
+// footer styles
+.footer {
+  background: $c-light-blue;
+  padding-bottom: 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+  &__left,
+  &__right {
+    flex: 1;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      align-items: start;
+      text-align: left;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    max-width: 15rem;
+    margin-bottom: 1.6rem;
+  }
+  &__subtitle {
+    max-width: 34rem;
+    margin-bottom: 4.8rem;
+    @include breakpoint(desktop) {
+      font-size: 2rem;
+    }
+  }
+  .social {
+    display: flex;
+    gap: 3rem;
+    &__link {
+      width: 4.8rem;
+      height: 4.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $c-blue;
+      color: $c-white;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: darken($c-blue, 10%);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &__icon {
+      font-size: 3rem;
+    }
+  }
+  &__info {
+    margin-bottom: 6rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+    }
+    h5 {
+      margin-bottom: 3rem;
+    }
+    ul {
+      li:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+      a {
+        color: $c-grey-blue;
+        &:hover {
+          color: $c-blue;
+        }
+      }
+    }
+  }
+  &__copyright {
+    text-align: center;
+    padding: 4.8rem 0;
+    @include breakpoint(tablet) {
+      margin-top: 6rem;
+    }
+    @include breakpoint(desktop) {
+      margin-top: 12rem;
     }
   }
 }

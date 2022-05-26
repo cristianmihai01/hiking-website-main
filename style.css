@@ -103,6 +103,7 @@ img {
   max-width: 1200px;
   padding: 0 3rem;
   margin: auto;
+  overflow: hidden;
 }
 
 .pretitle {

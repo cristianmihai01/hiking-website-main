@@ -346,11 +346,11 @@ img {
 
 // .hero styles
 .hero {
+  padding: 10rem 0 5rem 0;
   display: flex;
   background: url('assets/img/hero_bg.svg') no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 10rem 0 5rem 0;
   position: relative;
   z-index: 1;
   @include breakpoint(tablet) {
@@ -411,14 +411,6 @@ img {
     }
     @include breakpoint(tablet) {
       width: auto;
-    }
-  }
-  &__img {
-    max-width: 488px;
-    max-height: 662px;
-    display: none;
-    @include breakpoint(desktop) {
-      display: flex;
     }
   }
 }
